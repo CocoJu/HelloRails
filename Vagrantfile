@@ -4,10 +4,10 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # Use Ubuntu 14.04 Trusty Tahr 64-bit as our operating system
   config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
-  # Configurate the virtual machine to use 2GB of RAM
+  # Configurate the virtual machine to use 1GB of RAM
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
